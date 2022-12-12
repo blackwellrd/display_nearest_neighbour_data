@@ -110,31 +110,31 @@ vct_pcn <- df_pcn_data %>%
   .$PCN_CODE
 names(vct_pcn) <- df_pcn_data %>% 
   arrange(PCN_CODE, PCN_NAME) %>% 
-  transmute(label = paste0('[', PCN_CODE, '] - ', PCN_NAME)) %>%
-  .$label
+  transmute(name = paste0('[', PCN_CODE, '] - ', PCN_NAME)) %>%
+  .$name
 
 vct_region <- df_practice_data %>% 
   arrange(COMM_REGION_CODE, COMM_REGION_NAME) %>% 
   .$COMM_REGION_CODE
 names(vct_region) <- df_practice_data %>% 
   arrange(COMM_REGION_CODE, COMM_REGION_NAME) %>% 
-  transmute(label = paste0('[', COMM_REGION_CODE, '] - ', COMM_REGION_NAME)) %>%
-  .$label
+  transmute(name = paste0('[', COMM_REGION_CODE, '] - ', COMM_REGION_NAME)) %>%
+  .$name
 
 vct_icb <- df_practice_data %>% 
   arrange(ICB_CODE, ICB_NAME) %>% 
   .$ICB_CODE
 names(vct_icb) <- df_practice_data %>% 
   arrange(ICB_CODE, ICB_NAME) %>% 
-  transmute(label = paste0('[', ICB_CODE, '] - ', ICB_NAME)) %>%
-  .$label
+  transmute(name = paste0('[', ICB_CODE, '] - ', ICB_NAME)) %>%
+  .$name
 
 vct_subicb <- df_practice_data %>% 
   arrange(SUB_ICB_LOCATION_CODE, SUB_ICB_LOCATION_NAME) %>% 
   .$SUB_ICB_LOCATION_CODE
 names(vct_subicb) <- df_practice_data %>% 
   arrange(SUB_ICB_LOCATION_CODE, SUB_ICB_LOCATION_NAME) %>% 
-  transmute(label = paste0('[', SUB_ICB_LOCATION_CODE, '] - ', SUB_ICB_LOCATION_NAME)) %>%
-  .$label
+  transmute(name = paste0('[', SUB_ICB_LOCATION_CODE, '] - ', SUB_ICB_LOCATION_NAME)) %>%
+  .$name
 
 

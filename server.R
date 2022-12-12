@@ -5,6 +5,9 @@
 
 shinyServer(function(session, input, output) {
   source('serverMap.R', local = TRUE, encoding = "UTF-8")
+  
+  # Ensure the session stops
+  session$onSessionEnded(stopApp)
   }
 )
 
