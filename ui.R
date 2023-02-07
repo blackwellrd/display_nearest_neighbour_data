@@ -25,16 +25,19 @@ ui <- fluidPage(
       selectInput(inputId = 'selSubICB', label = 'Sub-ICB Location', choices = c(''), selected = NULL),
       selectInput(inputId = 'selOrg', label = 'Organisation', choices = c(''), selected = NULL),
       tags$hr(),
+      selectInput(inputId = 'selVarGroup', label = 'Data Section', choices = vct_data_sections, selected = NULL),
+      selectInput(inputId = 'selVar', label = 'Variable', choices = c(''), selected = NULL),
       width = 2),
     mainPanel(
       tabsetPanel(
         id = 'tabPanel',
         type = 'tabs',
         source('tabMapUI.R', local = TRUE)$value,
+        source('tabComparisonUI.R', local = TRUE)$value,
         tabPanel(
           title = 'Table',
-          value = 'tab02',
-          DT::dataTableOutput('tab02_table'),
+          value = 'tab03',
+          DT::dataTableOutput('tab03_table'),
           tags$hr()
         )
       ),
@@ -43,18 +46,3 @@ ui <- fluidPage(
   )
 )
 
-# ui <- fluidPage(
-#   shinyjs::useShinyjs(),
-#   titlePanel('Cluster Viewer'),
-#   tabsetPanel(
-#     id = 'tabPanel',
-#     type = 'tabs',
-#     source('tabImportDataUI.R', local = TRUE)$value,
-#     source('tabDemographicPlotsUI.R', local = TRUE)$value,
-#     source('tabQOFRegisterPlotsUI.R', local = TRUE)$value,
-#     source('tabQOFRegisterTablesUI.R', local = TRUE)$value,
-#     source('tabOtherRegisterTablesUI.R', local = TRUE)$value,
-#     source('tabPatientAttributePlotsUI.R', local = TRUE)$value,
-#     source('tabDemandActivityPlotsUI.R', local = TRUE)$value
-#   )
-# )
