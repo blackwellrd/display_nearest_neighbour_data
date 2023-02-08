@@ -6,6 +6,6 @@
 tabPanel(
   title = 'Comparison',
   value = 'tab02',
-  plotlyOutput('tab02_pltNational'),
-  plotlyOutput('tab02_pltNeighbours')
+  htmlOutput('tab02_txtHeader'),
+  plotlyOutput('tab02_pltNational', height = 800)
 )
