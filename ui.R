@@ -3,6 +3,7 @@
 # File: ui.R                                                  #
 # =========================================================== #
 ui <- fluidPage(
+  theme = shinytheme('paper'),
   shinyjs::useShinyjs(),
   withMathJax(),
   titlePanel('Nearest Neighbour'),

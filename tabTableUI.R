@@ -6,5 +6,5 @@
 tabPanel(
   title = 'Table',
   value = 'tab03',
-  dataTableOutput('tab03_table')
+  DT::DTOutput('tab03_table')
 )

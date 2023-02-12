@@ -70,16 +70,37 @@ if (!require(htmltools)) {
 }
 library(htmltools)
 
+# DT for the datatable file access
+if (!require(DT)) {
+  install.packages('DT')
+}
+library(DT)
+
+# Shinythemes for the bootstrap themes file access
+if (!require(shinythemes)) {
+  install.packages('shinythemes')
+}
+library(shinythemes)
+
 # ------------- #
 # Load ini file #
 # ------------- #
 ini_file_sections <- read.ini('display_nearest_neighbour_data_app.ini')
 
+# ---------------------------- #
+# Get the field names required #
+# ---------------------------- #
+organisation_variables <- names(ini_file_sections$organisation_data)
+numeric_variables <- character(0)
+for(section in names(ini_file_sections$comparison_data_sections)){
+  numeric_variables <- c(numeric_variables, names(ini_file_sections[[section]]))
+}
+
 # --------------- #
 # Load data files #
 # --------------- #
-df_practice_data <- read.csv(ini_file_sections$filenames$practice_data)
-df_pcn_data <- read.csv(ini_file_sections$filenames$pcn_data)
+df_practice_data <- read.csv(ini_file_sections$filenames$practice_data) %>% select(organisation_variables, numeric_variables)
+df_pcn_data <- read.csv(ini_file_sections$filenames$pcn_data) %>% select(organisation_variables, numeric_variables)
 df_practice_neighbours <- read.csv(ini_file_sections$filenames$practice_neighbours)
 df_pcn_neighbours <- read.csv(ini_file_sections$filenames$pcn_neighbours)
 
