@@ -66,6 +66,7 @@ output$tab02_pltNational <- renderPlotly({
       ) %>%
       layout(
         title = paste0('Box Plot of Distribution of ', sel_var_desc, ' by Practice with Neighbour and Origin Values'),
+        xaxis = list(showticklabels=FALSE),
         yaxis = list(title = sel_var_desc)
       )
     plt
@@ -118,6 +119,7 @@ output$tab02_pltNational <- renderPlotly({
       ) %>%
       layout(
         title = paste0('Box Plot of Distribution of ', sel_var_desc, ' by PCN with Neighbour and Origin Values'),
+        xaxis = list(showticklabels=FALSE),
         yaxis = list(title = sel_var_desc)
       )      
     plt    

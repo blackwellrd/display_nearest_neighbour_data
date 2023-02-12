@@ -4,6 +4,7 @@
 # =========================================================== #
 ui <- fluidPage(
   shinyjs::useShinyjs(),
+  withMathJax(),
   titlePanel('Nearest Neighbour'),
   sidebarLayout(
     sidebarPanel(
@@ -34,12 +35,10 @@ ui <- fluidPage(
         type = 'tabs',
         source('tabMapUI.R', local = TRUE)$value,
         source('tabComparisonUI.R', local = TRUE)$value,
-        tabPanel(
-          title = 'Table',
-          value = 'tab03',
-          DT::dataTableOutput('tab03_table'),
-          tags$hr()
-        )
+        source('tabTableUI.R', local = TRUE)$value,
+        tabPanel(title = 'Appx: Data Sources', value = 'tab04', htmlOutput('tab04_htmlDataSources'), tags$hr()),
+        tabPanel(title = 'Appx: Variables', value = 'tab05', htmlOutput('tab05_htmlVariables'), tags$hr()),
+        tabPanel(title = 'Appx: Methodology', value = 'tab06', htmlOutput('tab06_htmlMethodology'), tags$hr())
       ),
       width = 10
     )

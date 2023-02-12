@@ -64,6 +64,12 @@ if (!require(ini)) {
 }
 library(ini)
 
+# Htmltools for the htmltools file access
+if (!require(htmltools)) {
+  install.packages('htmltools')
+}
+library(htmltools)
+
 # ------------- #
 # Load ini file #
 # ------------- #

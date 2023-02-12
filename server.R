@@ -127,6 +127,11 @@ shinyServer(function(session, input, output) {
   
   source('serverMap.R', local = TRUE, encoding = "UTF-8")
   source('serverComparison.R', local = TRUE, encoding = "UTF-8")
+  source('serverTable.R', local = TRUE, encoding = "UTF-8")
+  
+  output$tab04_htmlDataSources <- renderUI({withMathJax(includeHTML('data_sources.html'))})
+  output$tab05_htmlVariables <- renderUI({withMathJax(includeHTML('variables.html'))})
+  output$tab06_htmlMethodology <- renderUI({withMathJax(includeHTML('methodology.html'))})
   
   # Ensure the session stops
   session$onSessionEnded(stopApp)

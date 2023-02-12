@@ -60,6 +60,10 @@ output$tab01_map <- renderLeaflet({
     )
   }
   map <- map %>% 
+    addControl(
+      html = 'Source: Office for National Statistics licensed under the Open Government Licence v.3.0<br>Contains OS data © Crown copyright and database right [2023]',
+      position = "bottomleft", layerId = NULL, className = "info legend"
+    ) %>% 
     addLayersControl(overlayGroups = c('ORIGIN','NEIGHBOUR'))
 })
 
