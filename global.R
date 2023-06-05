@@ -70,6 +70,12 @@ if (!require(htmltools)) {
 }
 library(htmltools)
 
+# MASS to overcome shiny deploy issue
+if (!require(MASS)) {
+  install.packages('MASS')
+}
+library(MASS)
+
 # ------------- #
 # Load ini file #
 # ------------- #
