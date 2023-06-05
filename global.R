@@ -70,18 +70,6 @@ if (!require(htmltools)) {
 }
 library(htmltools)
 
-# DT for the datatable file access
-if (!require(DT)) {
-  install.packages('DT')
-}
-library(DT)
-
-# Shinythemes for the bootstrap themes file access
-if (!require(shinythemes)) {
-  install.packages('shinythemes')
-}
-library(shinythemes)
-
 # ------------- #
 # Load ini file #
 # ------------- #
