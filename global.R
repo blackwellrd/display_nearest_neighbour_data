@@ -7,11 +7,7 @@
 # Load libraries #
 # -------------- #
 
-# Default to the UK Bristol CRAN mirror
-chooseCRANmirror(ind=94)
-
-#devtools::install_version("MASS", "7.3-58.1")
-install.packages('sp')
+# Classes and Methods for Spatial Data 
 library(sp)
 
 # Shiny package for app
@@ -43,7 +39,6 @@ library(ini)
 
 # Htmltools for the htmltools file access
 library(htmltools)
-
 
 # ------------- #
 # Load ini file #
