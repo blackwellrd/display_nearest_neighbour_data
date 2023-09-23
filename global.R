@@ -10,71 +10,40 @@
 # Default to the UK Bristol CRAN mirror
 chooseCRANmirror(ind=94)
 
+#devtools::install_version("MASS", "7.3-58.1")
+install.packages('sp')
+library(sp)
+
 # Shiny package for app
-if (!require(shiny)) {
-    install.packages('shiny')
-}
 library(shiny)
 
 # shinyjs for the shinyjs tools
-if (!require(shinyjs)) {
-    install.packages('shinyjs')
-}
 library(shinyjs)
 
 # DT package for the data tables
-if (!require(DT)) {
-    install.packages('DT')
-}
 library(DT)
 
 # Tidyverse for data manipulation
-if (!require(tidyverse)) {
-    install.packages('tidyverse')
-}
 library(tidyverse)
 
 # Plotly for interactive charts
-if (!require(plotly)) {
-    install.packages('plotly')
-}
 library(plotly)
 
 # Leaflet for interactive maps
-if (!require(leaflet)) {
-  install.packages('leaflet')
-}
 library(leaflet)
 
 # rgdal for geospatial manipulation
-if (!require(rgdal)) {
-  install.packages('rgdal')
-}
 library(rgdal)
 
 # sf for shape file manipulation
-if (!require(sf)) {
-  install.packages('sf')
-}
 library(sf)
 
 # Ini for the ini file access
-if (!require(ini)) {
-    install.packages('ini')
-}
 library(ini)
 
 # Htmltools for the htmltools file access
-if (!require(htmltools)) {
-  install.packages('htmltools')
-}
 library(htmltools)
 
-# MASS to overcome shiny deploy issue
-if (!require(MASS)) {
-  install.packages('MASS')
-}
-library(MASS)
 
 # ------------- #
 # Load ini file #
