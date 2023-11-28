@@ -11,26 +11,26 @@ output$tab03_table <- DT::renderDT({
   df_neighbours <- df_neighbours %>% select(all_of(all_variables))
 
   if(input$selLevel=='Practice'){
-    df_neighbours$TYPE[df_neighbours$PRACTICE_CODE==input$selOrg] <- 'ORIGIN'
-    df_neighbours$TYPE[df_neighbours$PRACTICE_CODE %in% df_practice_neighbours$dest[df_practice_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
+    df_neighbours$TYPE[df_neighbours$ORG_CODE==input$selOrg] <- 'ORIGIN'
+    df_neighbours$TYPE[df_neighbours$ORG_CODE %in% df_practice_neighbours$dest[df_practice_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
     df_national_data <- df_neighbours %>% 
       summarise(across(.cols = numeric_variables, .fns = quantile, probs = c(0, 0.25, 0.5, 0.75, 1), na.rm = TRUE)) %>%
       ungroup() %>%
       mutate(
         TYPE = rep('NATIONAL', 5),
-        PRACTICE_CODE = c('NAT_MIN', 'NAT_Q1', 'NAT_MED', 'NAT_Q3', 'NAT_MAX'),
-        PRACTICE_NAME = c('National Minimum', 'National 1st Quartile', 'National Median', 'National 3rd Quartile', 'National Maximum')
+        ORG_CODE = c('NAT_MIN', 'NAT_Q1', 'NAT_MED', 'NAT_Q3', 'NAT_MAX'),
+        ORG_NAME = c('National Minimum', 'National 1st Quartile', 'National Median', 'National 3rd Quartile', 'National Maximum')
       )
   } else if(input$selLevel=='PCN'){
-    df_neighbours$TYPE[df_neighbours$PCN_CODE==input$selOrg] <- 'ORIGIN'
-    df_neighbours$TYPE[df_neighbours$PCN_CODE %in% df_pcn_neighbours$dest[df_pcn_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
+    df_neighbours$TYPE[df_neighbours$ORG_CODE==input$selOrg] <- 'ORIGIN'
+    df_neighbours$TYPE[df_neighbours$ORG_CODE %in% df_pcn_neighbours$dest[df_pcn_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
     df_national_data <- df_neighbours %>% 
       summarise(across(.cols = numeric_variables, .fns = quantile, probs = c(0, 0.25, 0.5, 0.75, 1), na.rm = TRUE)) %>%
       ungroup() %>%
       mutate(
         TYPE = rep('NATIONAL', 5),
-        PCN_CODE = c('NAT_MIN', 'NAT_Q1', 'NAT_MED', 'NAT_Q3', 'NAT_MAX'),
-        PCN_NAME = c('National Minimum', 'National 1st Quartile', 'National Median', 'National 3rd Quartile', 'National Maximum')
+        ORG_CODE = c('NAT_MIN', 'NAT_Q1', 'NAT_MED', 'NAT_Q3', 'NAT_MAX'),
+        ORG_NAME = c('National Minimum', 'National 1st Quartile', 'National Median', 'National 3rd Quartile', 'National Maximum')
       )
   }
 

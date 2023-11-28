@@ -17,21 +17,21 @@ shinyServer(function(session, input, output) {
     {
       if(input$selLevel=='Practice'){
         vct_Orgs <- rv_data() %>% 
-          distinct(SUB_ICB_LOCATION_CODE, PRACTICE_CODE, PRACTICE_NAME) %>% 
-          filter(SUB_ICB_LOCATION_CODE==input$selSubICB) %>%
+          distinct(ICB_CODE, ORG_CODE, ORG_NAME) %>% 
+          filter(ICB_CODE==input$selICB) %>%
           transmute(
-            name = paste0('[', PRACTICE_CODE, '] - ', PRACTICE_NAME),
-            code = PRACTICE_CODE
+            name = paste0('[', ORG_CODE, '] - ', ORG_NAME),
+            code = ORG_CODE
           ) %>%
           arrange(name) %>%
           deframe()
       } else if(input$selLevel=='PCN'){
         vct_Orgs <- rv_data() %>% 
-          distinct(SUB_ICB_LOCATION_CODE, PCN_CODE, PCN_NAME) %>% 
-          filter(SUB_ICB_LOCATION_CODE==input$selSubICB) %>%
+          distinct(ICB_CODE, ORG_CODE, ORG_NAME) %>% 
+          filter(ICB_CODE==input$selICB) %>%
           transmute(
-            name = paste0('[', PCN_CODE, '] - ', PCN_NAME),
-            code = PCN_CODE
+            name = paste0('[', ORG_CODE, '] - ', ORG_NAME),
+            code = ORG_CODE
           ) %>%
           arrange(name) %>%
           deframe()
@@ -50,8 +50,8 @@ shinyServer(function(session, input, output) {
       updateSelectInput(
         inputId = 'selICB', 
         choices = rv_data() %>% 
-          distinct(COMM_REGION_CODE, ICB_CODE, ICB_NAME) %>% 
-          filter(COMM_REGION_CODE==input$selRegion) %>%
+          distinct(NHSER_CODE, ICB_CODE, ICB_NAME) %>% 
+          filter(NHSER_CODE==input$selRegion) %>%
           transmute(
             name = paste0('[', ICB_CODE, '] - ', ICB_NAME),
             code = ICB_CODE
@@ -65,41 +65,23 @@ shinyServer(function(session, input, output) {
   observeEvent(
     input$selICB,
     {
-      updateSelectInput(
-        inputId = 'selSubICB', 
-        choices = rv_data() %>% 
-          distinct(ICB_CODE, SUB_ICB_LOCATION_CODE, SUB_ICB_LOCATION_NAME) %>% 
-          filter(ICB_CODE==input$selICB) %>%
-          transmute(
-            name = paste0('[', SUB_ICB_LOCATION_CODE, '] - ', SUB_ICB_LOCATION_NAME),
-            code = SUB_ICB_LOCATION_CODE
-          ) %>%
-          arrange(name) %>%
-          deframe()
-      )
-    }
-  )
-  
-  observeEvent(
-    input$selSubICB,
-    {
       if(input$selLevel=='Practice'){
         vct_Orgs <- rv_data() %>% 
-          distinct(SUB_ICB_LOCATION_CODE, PRACTICE_CODE, PRACTICE_NAME) %>% 
-          filter(SUB_ICB_LOCATION_CODE==input$selSubICB) %>%
+          distinct(ICB_CODE, ORG_CODE, ORG_NAME) %>% 
+          filter(ICB_CODE==input$selICB) %>%
           transmute(
-            name = paste0('[', PRACTICE_CODE, '] - ', PRACTICE_NAME),
-            code = PRACTICE_CODE
+            name = paste0('[', ORG_CODE, '] - ', ORG_NAME),
+            code = ORG_CODE
           ) %>%
           arrange(name) %>%
           deframe()
       } else if(input$selLevel=='PCN'){
         vct_Orgs <- rv_data() %>% 
-          distinct(SUB_ICB_LOCATION_CODE, PCN_CODE, PCN_NAME) %>% 
-          filter(SUB_ICB_LOCATION_CODE==input$selSubICB) %>%
+          distinct(ICB_CODE, ORG_CODE, ORG_NAME) %>% 
+          filter(ICB_CODE==input$selICB) %>%
           transmute(
-            name = paste0('[', PCN_CODE, '] - ', PCN_NAME),
-            code = PCN_CODE
+            name = paste0('[', ORG_CODE, '] - ', ORG_NAME),
+            code = ORG_CODE
           ) %>%
           arrange(name) %>%
           deframe()
