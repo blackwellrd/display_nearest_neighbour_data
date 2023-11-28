@@ -4,11 +4,10 @@
 <h3><a href="#nearest-neighbours"></a>Nearest Neighbours</h3>
 <p>All the above fields are scaled by <strong>centring</strong> the values by subtracting the mean of the values from each value and then <strong>scaled</strong> by dividing the centred values by the standard deviation of the centred values.</p>
 <p>The Euclidian distance between pairs of organisations are calculated as follows, the distance between <strong>organisation p</strong> and <strong>organisation q</strong> is</p>
-<p>$$(d, q) = \sqrt{(p_1 - q_1)^2 + (p_2 - q_2)^2 + \cdots + (p_{134} - q_{134})^2}$$</math-renderer></p>
-<p>as we have 134 variables used in the population, QOF achievement and prevalence, IMD domains and underlying indicators, and primary care workforce data.</p>
-<p>df_practice_data_matrix</p>
-<p>These distances are calculated for all points $$\frac{n * (n-1)}{2}$$for <strong>practices</strong> that is $$\frac{(6455 * (6455 - 1))}{2} = 20830285$$ and for <strong>PCNs</strong> that is $$\frac{(1265 * (1265 - 1))}{2} = 799480$$</p>
-<p>The top n (in the example we will use the top 5) closest organisations are used as the nearest neighbours</p>
+<p>$$(d, q) = \sqrt{(p_1 - q_1)^2 + (p_2 - q_2)^2 + \cdots + (p_{k} - q_{k})^2}$$</math-renderer></p>
+<p>where <b>k</b> is the number of variables used in the matching process.</p>
+<p>These distances are calculated for all points $$\frac{n * (n-1)}{2}$$for <strong>practices</strong> that is $$\frac{(6333 * (6333 - 1))}{2} = 20,050,278$$ and for <strong>PCNs</strong> that is $$\frac{(1271 * (1271 - 1))}{2} = 807,085$$</p>
+<p>The top <b>n</b> (in the example we will use the top 10) closest organisations are used as the nearest neighbours</p>
 <!-- Commented out
 <hr>
 <h3><a href="#clustering"></a>Clustering</h3>

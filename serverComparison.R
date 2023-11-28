@@ -33,6 +33,8 @@ output$tab02_pltNational <- renderPlotly({
       )
 
     pal <- colorFactor(palette = c('ORIGIN' = '#e41a1c', 'NEIGHBOUR' = '#4daf4a', 'OTHER' = '#377eb8'), levels = c('ORIGIN','NEIGHBOUR','OTHER'))
+    # In case we want to remove outliers
+    # plt <- plot_ly(data = df_plot_data, boxpoints = FALSE) %>%
     plt <- plot_ly(data = df_plot_data) %>%
       add_trace(
         name = 'National',
