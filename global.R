@@ -47,9 +47,9 @@ df_pcn_data <- df_pcn_data %>% filter(!is.na(LATITUDE))
 # --------------- #
 # Load shapefiles #
 # --------------- #
-sf_subicb <- st_read(
-  dsn = ini_file_sections$filenames$subicb_boundaries_dsn, 
-  layer = ini_file_sections$filenames$subicb_boundaries_layer) %>%
+sf_icb <- st_read(
+  dsn = ini_file_sections$filenames$icb_boundaries_dsn, 
+  layer = ini_file_sections$filenames$icb_boundaries_layer) %>%
   st_transform(crs = 4326)
 
 vct_data_sections <- names(unlist(ini_file_sections$comparison_data_sections))

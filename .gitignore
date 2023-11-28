@@ -27,3 +27,4 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 display_nearest_neighbour_data.Rproj
+rsconnect
