@@ -454,67 +454,114 @@ An assessment of breathlessness using the Medical Research Council dyspnoea scal
   </ul>
 </ul>
 <hr>
-
-
 <h3>IMD Domain and Sub-Domain Fields</h3>
 <ul>
-<li>IMD_SCORE - Indices of Multiple Deprivation (IMD) Score</li>
-<li>INCOME_SCORE - Income IMD Domain Score</li>
-<li>EMPLOYMENT_SCORE - Employment IMD Domain Score</li>
-<li>EDUCATION_SCORE - Education IMD Domain Score</li>
-<li>HEALTH_SCORE - Health IMD Domain Score</li>
-<li>CRIME_SCORE - Crime IMD Domain Score</li>
-<li>HOUSING_SCORE - Barriers to Housing and Services IMD Domain Score</li>
-<li>ENVIRONMENT_SCORE - Living Environment IMD Domain Score</li>
-<li>IDACI_SCORE - Income Deprivation Affecting Children Indicator (IDACI) Score</li>
-<li>IDAOPI_SCORE - Income Deprivation Affecting Older People Indicator (IDAOPI) Score</li>
-<li>CYP_SCORE - Children and Young People IMD Sub-Domain Score</li>
-<li>ADULT_SCORE - Adult Skills</li>
-<li>GEOGRAPHICAL_SCORE - Geographical Barriers</li>
-<li>WIDER_BARRIERS_SCORE - Wider Barriers</li>
-<li>INDOORS_SCORE - Indoor Environment</li>
-<li>OUTDOORS_SCORE - Outdoor Environment</li>
+<li>imd - Indices of Multiple Deprivation (IMD) Score</li>
+<li>income_domain - Income IMD Domain Score</li>
+<li>employment_domain - Employment IMD Domain Score</li>
+<li>education_domain - Education IMD Domain Score</li>
+<li>health_domain - Health IMD Domain Score</li>
+<li>crime_domain - Crime IMD Domain Score</li>
+<li>housing_and_services_domain - Barriers to Housing and Services IMD Domain Score</li>
+<li>environment_domain - Living Environment IMD Domain Score</li>
+<li>idaci_subdomain - Income Deprivation Affecting Children Indicator (IDACI) Score</li>
+<li>idaopi_subdomain - Income Deprivation Affecting Older People Indicator (IDAOPI) Score</li>
+<li>children_edu_subdomain - Children and Young People IMD Sub-Domain Score</li>
+<li>adult_edu_subdomain - Adult Skills</li>
+<li>geographical_barriers_subdomain - Geographical Barriers</li>
+<li>wider_barriers_subdomain - Wider Barriers</li>
+<li>indoors_subdomain - Indoor Environment</li>
+<li>outdoors_subdomain - Outdoor Environment</li>
 </ul>
 <hr>
 <h3>IMD Underlying Indicator Fields</h3>
 <ul>
-<li>DOM_INCOME_INCOME_NUMERATOR - Income Domain: Income Indicator Numerator</li>
-<li>DOM_INCOME_IDACI_NUMERATOR - Income Domain: IDACI Numerator</li>
-<li>DOM_INCOME_IDAOPI_NUMERATOR - Income Domain: IDAOPI Numerator</li>
-<li>DOM_EMPLOYMENT_EMPLOYMENT_NUMERATOR - Employment Domain: Employment Numerator</li>
-<li>DOM_EDUCATION_PCT_NOT_IN_EDUCATION_POST_16 - Education Domain: Not in Education Post 16 Proportion</li>
-<li>DOM_EDUCATION_PCT_NOT_IN_HIGHER_EDUCATION - Education Domain: Not in Higher Education Proportion</li>
-<li>DOM_EDUCATION_PCT_LOW_ADULT_SKILLS_AND_LANGUAGE - Education Domain: Low Adult skills and Low English Proficiency combined Proportion</li>
-<li>DOM_HEALTH_YEARS_LIFE_LOST_INDICATOR - Health Domain: Year of Potential Life Lost Indicator</li>
-<li>DOM_HEALTH_COMPARITIVE_ILLNESS_DISABILITY_INDICATOR - Health Domain: Comparative Illness and Disability Ratio Indicator</li>
-<li>DOM_HEALTH_ACUTE_MORBIDITy_INDICATOR - Health Domain: Acute Morbidity Indicator</li>
-<li>DOM_HEALTH_MOOD_AND_ANXIETY_INDICATOR - Health Domain: Mood and Anxiety Disorders Indicator</li>
-<li>DOM_BARRIERS_POST_OFFICE_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest Post Office</li>
-<li>DOM_BARRIERS_PRIMARY_SCHOOL_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest Primary School</li>
-<li>DOM_BARRIERS_SUPERMARKET_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest General Store or Supermarket</li>
-<li>DOM_BARRIERS_PRACTICE_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest GP Surgery</li>
-<li>DOM_BARRIERS_OVERCROWDING - Barriers to housing and Services Domain: Proportion of Households Claased as Overcrowded</li>
-<li>DOM_BARRIERS_HOMELESSNESS_RATE - Barriers to housing and Services Domain: Rate of Acceptance of Housing Assistance under Homelessness Provisions</li>
-<li>DOM_BARRIERS_OWNER_AFFORDABILITY - Barriers to housing and Services Domain: Owner Occupation Affordability Indicator</li>
-<li>DOM_BARRIERS_RENTAL_AFFORDABILITY - Barriers to housing and Services Domain: Private Rental Affordability Indicator</li>
-<li>DOM_BARRIERS_HOUSING_AFFORDABILITY - Barriers to housing and Services Domain: Combined Owner Occupier and Private Rental Affordability Indicator</li>
-<li>DOM_ENVIRONMENT_POOR_CONDITION_HOUSING - Living Environment Domain: Proportion of Housing in Poor Condition</li>
-<li>DOM_ENVIRONMENT_NO_CENTRAL_HEATING - Living Environment Domain: Proportion of Housing with No Central Heating</li>
-<li>DOM_ENVIRONMENT_ROAD_TRAFFIC_ACCIDENTS - Living Environment Domain: Accidents resulting in Death or Personal Injury to Pedestrian or Cyclist Indicator</li>
-<li>DOM_ENVIRONMENT_NITROGEN_DIOXIDE - Living Environment Domain: Estimate of Concentration of Nitrogen Dioxide in Air</li>
-<li>DOM_ENVIRONMENT_BENZENE - Living Environment Domain: Estimate of Concentration of Benzene in Air</li>
-<li>DOM_ENVIRONMENT_SULPHUR_DIOXIDE - Living Environment Domain: Estimate of Concentration of Sulphur Dioxide in Air</li>
-<li>DOM_ENVIRONMENT_PARTICULATES - Living Environment Domain: Estimate of Concentration of Particulates in Air</li>
-<li>DOM_ENVIRONMENT_AIR_QUALITY - Living Environment Domain: Combined Air Quality Indicator</li>
+  <li>Income Domain</li>
+  <ul>
+    <li>income_numerator - Income Indicator Numerator</li>
+    <li>idaci_numerator - IDACI Numerator</li>
+    <li>idopi_numerator - IDAOPI Numerator</li>
+  </ul>
+  <li>Employment Domain</li>
+  <ul>
+    <li>employment_numerator - Employment Numerator</li>
+  </ul>
+  <li>Education Domain</li>
+  <ul>
+    <li>post_16_education_numerator - Not in Education Post 16 Proportion</li>
+    <li>entry_to_higher_edu_numerator - Not in Higher Education Proportion</li>
+    <li>adult_skills_numerator - Low Adult skills and Low English Proficiency combined Proportion</li>
+  </ul>
+  <li>Health Domain</li>
+  <ul>
+    <li>year_of_life_lost - Year of Potential Life Lost Indicator</li>
+    <li>comparative_illness_and_disability - Comparative Illness and Disability Ratio Indicator</li>
+    <li>acute_morbidity - Acute Morbidity Indicator</li>
+    <li>mood_and_anxiety_disorders - Mood and Anxiety Disorders Indicator</li>
+  </ul>
+  <li>Barriers to housing and Services Domain</li>
+  <ul>
+    <li>post_office_distance - Average Distance in km to Nearest Post Office</li>
+    <li>primary_school_distance - Average Distance in km to Nearest Primary School</li>
+    <li>general_store_distance - Average Distance in km to Nearest General Store or Supermarket</li>
+    <li>gp_distance - Average Distance in km to Nearest GP Surgery</li>
+    <li>household_overcrowding - Proportion of Households Claased as Overcrowded</li>
+    <li>homelessness_indicator - Rate of Acceptance of Housing Assistance under Homelessness Provisions</li>
+    <li>owner_occupation_affordability - Owner Occupation Affordability Indicator</li>
+    <li>private_rental_affordability - Private Rental Affordability Indicator</li>
+    <li>housing_affordability - Combined Owner Occupier and Private Rental Affordability Indicator</li>
+  </ul>
+  <li>Living Environment Domain</li>
+  <ul>
+    <li>poor_quality_housing - Proportion of Housing in Poor Condition</li>
+    <li>housing_without_central_heating - Proportion of Housing with No Central Heating</li>
+    <li>traffic_accidents - Accidents resulting in Death or Personal Injury to Pedestrian or Cyclist Indicator</li>
+    <li>nitrogen_dioxide - Estimate of Concentration of Nitrogen Dioxide in Air</li>
+    <li>benzene - Estimate of Concentration of Benzene in Air</li>
+    <li>sulphur_dioxide - Estimate of Concentration of Sulphur Dioxide in Air</li>
+    <li>particulates - Estimate of Concentration of Particulates in Air</li>
+    <li>air_quality - Combined Air Quality Indicator</li>    
+  </ul>
 </ul>
 <hr>
-<h3>General Practice Workforce Fields</h3>
+<h3>Ethnicity Fields</h3>
 <ul>
-<li>TOTAL_GP_FTE - Number of Full Time Equivalent GPs</li>
-<li>TOTAL_NURSES_FTE - Number of Full Time Equivalent Nurses</li>
-<li>TOTAL_DPC_FTE - Number of Full Time Equivalent Direct Patient Care Roles (not GP nor Nurse)</li>
-<li>TOTAL_ADMIN_FTE - Number of Full Time Equivalent Administrative Roles</li>
+  <li>asian - Ethnic group: Asian, Asian British or Asian Welsh</li>
+  <li>black - Ethnic group: Black, Black British, Black Welsh, Caribbean or African</li>
+  <li>mixed - Ethnic group: Mixed or Multiple ethnic groups</li>
+  <li>white - Ethnic group: White</li>
+  <li>other - Ethnic group: Other ethnic group</li>
 </ul>
+<hr>
+<h3>Workforce Fields</h3>
+<ul>
+  <li>gp_fte - Total General Practitioners (Full-time Equivalent)</li>
+  <li>nurse_fte - Total Nursing staff (Full-time Equivalent)</li>
+  <li>dpc_fte - Total Direct Patient Care staff (Full-time Equivalent)</li>
+  <li>admin_fte - Total Administrative staff (Full-time Equivalent)</li>
+</ul>
+<hr>
+<h3>Income Fields</h3>
+<ul>
+  <li>Practice</li>
+  <ul>
+      <li>income_per_head_popn - Average payments per weighted patient including PCN Workforce, Leadership and Support</li>  
+  </ul>
+  <li>Primary Care Network (PCN)</li>
+  <ul>
+      <li>income_per_head_popn - Sum of the following divided by the registered population of the PCN</li>
+      <ul>
+        <li>PCN Participation</li>
+        <li>PCN Leadership</li>
+        <li>PCN Support</li>
+        <li>PCN Workforce</li>
+        <li>PCN Care Home Premium</li>
+        <li>PCN Extended Hours Access</li>	
+        <li>PCN Investment and impact Fund</li>
+      </ul>
+  </ul>
+</ul>
+
 <!-- Commented out
 <hr>
 <h3>Organisation Cluster (Experimental)</h3>
