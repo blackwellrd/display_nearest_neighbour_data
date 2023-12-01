@@ -100,9 +100,11 @@ shinyServer(function(session, input, output) {
       if(input$tabPanel=='tab01'){
         shinyjs::hide(id = 'selVarGroup')
         shinyjs::hide(id = 'selVar')
+        shinyjs::hide(id = 'chkFocus')
       } else if(input$tabPanel=='tab02'){
         shinyjs::show(id = 'selVarGroup')
         shinyjs::show(id = 'selVar')
+        shinyjs::show(id = 'chkFocus')
       }
     }
   )
@@ -111,9 +113,10 @@ shinyServer(function(session, input, output) {
   source('serverComparison.R', local = TRUE, encoding = "UTF-8")
   source('serverTable.R', local = TRUE, encoding = "UTF-8")
   
-  output$tab04_htmlDataSources <- renderUI({withMathJax(includeHTML('data_sources.html'))})
-  output$tab05_htmlVariables <- renderUI({withMathJax(includeHTML('variables.html'))})
-  output$tab06_htmlMethodology <- renderUI({withMathJax(includeHTML('methodology.html'))})
+  output$tab04_htmlAuthor <- renderUI({withMathJax(includeHTML('author.html'))})
+  output$tab05_htmlDataSources <- renderUI({withMathJax(includeHTML('data_sources.html'))})
+  output$tab06_htmlVariables <- renderUI({withMathJax(includeHTML('variables.html'))})
+  output$tab07_htmlMethodology <- renderUI({withMathJax(includeHTML('methodology.html'))})
   
   # Ensure the session stops
   session$onSessionEnded(stopApp)

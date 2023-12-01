@@ -28,6 +28,7 @@ ui <- fluidPage(
       tags$hr(),
       selectInput(inputId = 'selVarGroup', label = 'Data Section', choices = vct_data_sections, selected = NULL),
       selectInput(inputId = 'selVar', label = 'Variable', choices = c(''), selected = NULL),
+      checkboxInput(input = 'chkFocus', label = 'Zoom to Neighbours', value = FALSE),
       width = 2),
     mainPanel(
       tabsetPanel(
@@ -36,9 +37,10 @@ ui <- fluidPage(
         source('tabMapUI.R', local = TRUE)$value,
         source('tabComparisonUI.R', local = TRUE)$value,
         source('tabTableUI.R', local = TRUE)$value,
-        tabPanel(title = 'Appx: Data Sources', value = 'tab04', htmlOutput('tab04_htmlDataSources'), tags$hr()),
-        tabPanel(title = 'Appx: Variables', value = 'tab05', htmlOutput('tab05_htmlVariables'), tags$hr()),
-        tabPanel(title = 'Appx: Methodology', value = 'tab06', htmlOutput('tab06_htmlMethodology'), tags$hr())
+        tabPanel(title = 'Appx: Author', value = 'tab04', htmlOutput('tab04_htmlAuthor'), tags$hr()),
+        tabPanel(title = 'Appx: Data Sources', value = 'tab05', htmlOutput('tab05_htmlDataSources'), tags$hr()),
+        tabPanel(title = 'Appx: Variables', value = 'tab06', htmlOutput('tab06_htmlVariables'), tags$hr()),
+        tabPanel(title = 'Appx: Methodology', value = 'tab07', htmlOutput('tab07_htmlMethodology'), tags$hr())
       ),
       width = 10
     )

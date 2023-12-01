@@ -71,7 +71,8 @@ output$tab02_pltNational <- renderPlotly({
         xaxis = list(showticklabels=FALSE),
         yaxis = list(title = sel_var_desc)
       )
-    plt
+    data_range <- df_plot_data %>% filter(TYPE!='OTHER') %>% .$METRIC
+    data_range <- c(min(data_range) * 0.975, max(data_range) * 1.025)
   } else if(input$selLevel=='PCN'){
     df_plot_data <- rv_data() %>% transmute(ORG_CODE, ORG_NAME, METRIC = !!rlang::sym(input$selVar))
     df_plot_data$TYPE <- 'OTHER'
@@ -124,6 +125,11 @@ output$tab02_pltNational <- renderPlotly({
         xaxis = list(showticklabels=FALSE),
         yaxis = list(title = sel_var_desc)
       )      
-    plt    
+    data_range <- df_plot_data %>% filter(TYPE!='OTHER') %>% .$METRIC
+    data_range <- c(min(data_range) * 0.975, max(data_range) * 1.025)
   }
+  if(input$chkFocus)
+    plt %>% layout(yaxis = list(range = data_range))
+  else
+    plt
 })
