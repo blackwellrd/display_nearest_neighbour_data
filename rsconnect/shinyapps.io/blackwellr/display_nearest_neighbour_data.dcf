@@ -1,0 +1,13 @@
+name: display_nearest_neighbour_data
+title: display_nearest_neighbour_data
+username:
+account: blackwellr
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8260266
+bundleId: 7307044
+url: https://blackwellr.shinyapps.io/display_nearest_neighbour_data/
+when: 1685979431.58382
+lastSyncTime: 1685979431.58383
+asMultiple: FALSE
+asStatic: FALSE
