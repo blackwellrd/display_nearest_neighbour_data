@@ -15,16 +15,15 @@ ui <- fluidPage(
         inputId = 'selRegion', 
         label = 'Region', 
         choices = df_practice_data %>% 
-                    distinct(COMM_REGION_CODE, COMM_REGION_NAME) %>% 
+                    distinct(NHSER_CODE, NHSER_NAME) %>% 
                     transmute(
-                      name = paste0('[', COMM_REGION_CODE, '] - ', COMM_REGION_NAME),
-                      code = COMM_REGION_CODE
+                      name = paste0('[', NHSER_CODE, '] - ', NHSER_NAME),
+                      code = NHSER_CODE
                     ) %>%
                     arrange(name) %>%
                     deframe()
       ),
       selectInput(inputId = 'selICB', label = 'ICB', choices = c(''), selected = NULL),
-      selectInput(inputId = 'selSubICB', label = 'Sub-ICB Location', choices = c(''), selected = NULL),
       selectInput(inputId = 'selOrg', label = 'Organisation', choices = c(''), selected = NULL),
       tags$hr(),
       selectInput(inputId = 'selVarGroup', label = 'Data Section', choices = vct_data_sections, selected = NULL),

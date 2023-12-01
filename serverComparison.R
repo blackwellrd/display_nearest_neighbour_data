@@ -18,21 +18,23 @@ output$tab02_pltNational <- renderPlotly({
   sel_var_desc <- unname(unlist(ini_file_sections[[input$selVarGroup]][input$selVar]))
   
   if(input$selLevel=='Practice'){
-    df_plot_data <- rv_data() %>% transmute(PRACTICE_CODE, PRACTICE_NAME, METRIC = !!rlang::sym(input$selVar))
+    df_plot_data <- rv_data() %>% transmute(ORG_CODE, ORG_NAME, METRIC = !!rlang::sym(input$selVar))
     df_plot_data$TYPE <- 'OTHER'
     
-    df_plot_data$TYPE[df_plot_data$PRACTICE_CODE==input$selOrg] <- 'ORIGIN'
-    df_plot_data$TYPE[df_plot_data$PRACTICE_CODE %in% df_practice_neighbours$dest[df_practice_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
+    df_plot_data$TYPE[df_plot_data$ORG_CODE==input$selOrg] <- 'ORIGIN'
+    df_plot_data$TYPE[df_plot_data$ORG_CODE %in% df_practice_neighbours$dest[df_practice_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
 
     nNeighbours = NROW(df_plot_data %>% filter(TYPE=='NEIGHBOUR'))
     dblJitter = 0.025
     
     df_plot_data <- df_plot_data %>% 
       mutate(
-        LABEL = paste0('[', PRACTICE_CODE, '] - ', PRACTICE_NAME)
+        LABEL = paste0('[', ORG_CODE, '] - ', ORG_NAME)
       )
 
     pal <- colorFactor(palette = c('ORIGIN' = '#e41a1c', 'NEIGHBOUR' = '#4daf4a', 'OTHER' = '#377eb8'), levels = c('ORIGIN','NEIGHBOUR','OTHER'))
+    # In case we want to remove outliers
+    # plt <- plot_ly(data = df_plot_data, boxpoints = FALSE) %>%
     plt <- plot_ly(data = df_plot_data) %>%
       add_trace(
         name = 'National',
@@ -71,18 +73,18 @@ output$tab02_pltNational <- renderPlotly({
       )
     plt
   } else if(input$selLevel=='PCN'){
-    df_plot_data <- rv_data() %>% transmute(PCN_CODE, PCN_NAME, METRIC = !!rlang::sym(input$selVar))
+    df_plot_data <- rv_data() %>% transmute(ORG_CODE, ORG_NAME, METRIC = !!rlang::sym(input$selVar))
     df_plot_data$TYPE <- 'OTHER'
     
-    df_plot_data$TYPE[df_plot_data$PCN_CODE==input$selOrg] <- 'ORIGIN'
-    df_plot_data$TYPE[df_plot_data$PCN_CODE %in% df_pcn_neighbours$dest[df_pcn_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
+    df_plot_data$TYPE[df_plot_data$ORG_CODE==input$selOrg] <- 'ORIGIN'
+    df_plot_data$TYPE[df_plot_data$ORG_CODE %in% df_pcn_neighbours$dest[df_pcn_neighbours$orig==input$selOrg]] <- 'NEIGHBOUR'
     
     nNeighbours = NROW(df_plot_data %>% filter(TYPE=='NEIGHBOUR'))
     dblJitter = 0.025
     
     df_plot_data <- df_plot_data %>% 
       mutate(
-        LABEL = paste0('[', PCN_CODE, '] - ', PCN_NAME)
+        LABEL = paste0('[', ORG_CODE, '] - ', ORG_NAME)
       )
     
     pal <- colorFactor(palette = c('ORIGIN' = '#e41a1c', 'NEIGHBOUR' = '#4daf4a', 'OTHER' = '#377eb8'), levels = c('ORIGIN','NEIGHBOUR','OTHER'))

@@ -3,182 +3,565 @@
 <hr>
 <h3>Organisation Fields</h3>
 <ul>
-<li>PRACTICE_CODE - Practice code</li>
-<li>PRACTICE_NAME - Practice name</li>
-<li>PRACTICE_POSTCODE - Practice postcode</li>
-<li>PCN_CODE - Primary Care Network code</li>
-<li>PCN_NAME - Primary Care Network name</li>
-<li>PCN_POSTCODE - Primary Care Network postcode</li>
-<li>SUB_ICB_LOCATION_CODE - Sub-ICB Location code</li>
-<li>SUB_ICB_LOCATION_NAME - Sub-ICB Location name</li>
-<li>ICB_CODE - Integrated Care Board (ICB) Location code</li>
-<li>ICB_NAME - Integrated Care Board (ICB) Location name</li>
-<li>COMM_REGION_CODE - NHS England Commissioning Region code</li>
-<li>COMM_REGION_NAME - NHS England Commissioning Region name</li>
-<li>SUPPLIER - GP Practice IT system supplier</li>
-<li>EASTING - Ordnance Survey OSGB36 (EPSG:27700) Easting of organisation postcode</li>
-<li>NORTHING - Ordnance Survey OSGB36 (EPSG:27700) Northing of organisation postcode</li>
+<li>ORG_CODE - Organisation Code</li>
+<li>ORG_NAME - Organisation Name</li>
+<li>POSTCODE - Organisation Postcode</li>
+<li>ICB_CODE - Integrated Care Board (ICB) Code</li>
+<li>ICB_NAME - Integrated Care Board (ICB) Name</li>
+<li>NHSER_CODE - NHS England Commissioning Region Code</li>
+<li>NHSER_NAME - NHS England Commissioning Region Name</li>
 <li>LATITUDE - World Geodetic System WGS84 (EPSG:4326) Latitude of organisation postcode</li>
 <li>LONGITUDE - World Geodetic System WGS84 (EPSG:4326) Longitude of organisation postcode</li>
+<li>POPN - List Size of Organisation</li>
 </ul>
 <hr>
 <h3>Population Fields</h3>
 <ul>
-<li>Q1_FEMALE - Lower Quartile Age of Female Population</li>
-<li>Q1_MALE - Lower Quartile Age of Male Population</li>
-<li>Q1_PERSON - Lower Quartile Age of Overall Population</li>
-<li>MEDIAN_FEMALE - Median Age of Female Population</li>
-<li>MEDIAN_MALE - Median Age of Male Population</li>
-<li>MEDIAN_PERSON - Median Age of Overall Population</li>
-<li>Q3_FEMALE - Upper Quartile Age of Female Population</li>
-<li>Q3_MALE - Upper Quartile Age of Male Population</li>
-<li>Q3_PERSON - Upper Quartile Age of Overall Population</li>
-<li>POPN_FEMALE - Female Population Size</li>
-<li>POPN_MALE - Male Population Size</li>
-<li>POPN_PERSON - Overall Population Size</li>
-<li>IQR_FEMALE - Interquartile Range of Female Population</li>
-<li>IQR_MALE - Interquartile Range of Male Population</li>
-<li>IQR_PERSON - Interquartile Range of Overall Population</li>
-<li>POPN_WEIGHTED_DENSITY - Population Density of Practice</li>
+<li>q1_females - Lower Quartile Age of Female Population</li>
+<li>q1_males - Lower Quartile Age of Male Population</li>
+<li>q1_persons - Lower Quartile Age of Overall Population</li>
+<li>median_females - Median Age of Female Population</li>
+<li>median_males - Median Age of Male Population</li>
+<li>median_persons - Median Age of Overall Population</li>
+<li>q3_females - Upper Quartile Age of Female Population</li>
+<li>q3_males - Upper Quartile Age of Male Population</li>
+<li>q3_persons - Upper Quartile Age of Overall Population</li>
+<li>popn_females - Female Population Size</li>
+<li>popn_males - Male Population Size</li>
+<li>popn_persons - Overall Population Size</li>
+<li>iqr_females - Interquartile Range of Female Population</li>
+<li>iqr_males - Interquartile Range of Male Population</li>
+<li>iqr_persons - Interquartile Range of Overall Population</li>
+<li>popn_per_km2 - Population Density (persons per square km) of Practice</li>
 </ul>
 <hr>
 <h3>QOF Achievement Fields</h3>
+<p><b>NB:</b> A copy of each of these variables with a suffix of <b>_raw</b> is present in the data, these are the raw unadjusted achievement values ignoring any adjustments for Personalised Care Adjustments (PCA)</p>
 <ul>
-<li>QOF_ACHV_AF006 - Percentage Achievement of AF006 - <i>The percentage of patients with atrial fibrillation in whom stroke risk has been assessed using the CHA2DS2-VASc score risk stratification scoring system in the preceding 12 months (excluding those patients with a previous CHADS2 or CHA2DS2-VASc score of 2 or more)</i> for 2021/22</li>
-<li>QOF_ACHV_AF007 - Percentage Achievement of AF007 - <i>In those patients with atrial fibrillation with a record of a CHA2DS2-VASc score of 2 or more, the percentage of patients who are currently treated with anticoagulation drug therapy</i> for 2021/22</li>
-<li>QOF_ACHV_AST006 - Percentage Achievement of AST006 - <i>The percentage of patients with asthma on the register from 1 April 2020 with either: 1. A record of spirometry and one other objective test (FeNO or reversibility or variability) between 3 months before or 6 months after diagnosis; or 2. If newly registered in the preceding 12 months with a diagnosis of asthma recorded on or after 1 April 2020 but no record of objective tests being performed before the date of registration, with a record of spirometry and one other objective test (FeNO or reversibility or variability) recorded within 6 months of registration</i> for 2021/22</li>
-<li>QOF_ACHV_AST007 - Percentage Achievement of AST007 - <i>The percentage of patients with asthma, on the register, who have had an asthma review in the preceding 12 months that includes an assessment of asthma control using a validated asthma control questionnaire, a recording of the number of exacerbations, an assessment of inhaler technique and a written personalised asthma plan</i> for 2021/22</li>
-<li>QOF_ACHV_AST008 - Percentage Achievement of AST008 - <i>The percentage of patients with asthma on the register aged 19 years or under, in whom there is a record of either personal smoking status or exposure to secondhand smoke in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_BP002 - Percentage Achievement of BP002 - <i>The percentage of patients aged 45 or over who have a record of blood pressure in the preceding 5 years</i> for 2021/22</li>
-<li>QOF_ACHV_CAN004 - Percentage Achievement of CAN004 - <i>The percentage of patients with cancer, diagnosed within the preceding 15 months, who have a patient review recorded as occurring within 6 months of the contractor receiving confirmation of diagnosis</i> for 2021/22</li>
-<li>QOF_ACHV_CAN005 - Percentage Achievement of CAN005 - <i>The percentage of patients with cancer, diagnosed within the preceding 12 months, who have had the opportunity for a discussion and informed of the support available from primary care, within 3 months of diagnosis</i> for 2021/22</li>
-<li>QOF_ACHV_CHD005 - Percentage Achievement of CHD005 - <i>The percentage of patients with coronary heart disease with a record in the preceding 12 months that aspirin, an alternative anti-platelet therapy, or an anti-coagulant is being taken</i> for 2021/22</li>
-<li>QOF_ACHV_CHD008 - Percentage Achievement of CHD008 - <i>The percentage of patients aged 79 years or under, with coronary heart disease, in whom the last blood pressure reading (measured in the preceding 12 months) is 140/90 mmHg or less</i> for 2021/22</li>
-<li>QOF_ACHV_CHD009 - Percentage Achievement of CHD009 - <i>The percentage of patients aged 80 years or over, with coronary heart disease, in whom the last blood pressure reading (measured in the preceding 12 months) is 150/90 mmHg or less</i> for 2021/22</li>
-<li>QOF_ACHV_COPD008 - Percentage Achievement of COPD008 - <i>The percentage of patients with COPD and Medical Research Council (MRC) dyspnoea scale ≥3 at any time in the preceding 12 months, with a subsequent record of an offer of referral to a pulmonary rehabilitation programme (excluding those who have previously attended a pulmonary rehabilitation programme)</i> for 2021/22</li>
-<li>QOF_ACHV_COPD010 - Percentage Achievement of COPD010 - <i>The percentage of patients with COPD, on the register, who have had a review in the preceding 12 months which included: A record of the number of exacerbations AND An assessment of breathlessness using the Medical Research Council dyspnoea scale</i> for 2021/22</li>
-<li>QOF_ACHV_CS005 - Percentage Achievement of CS005 - <i>The percentage of women eligible for screening and aged 25-49 years at the end of the reporting period whose notes record that an adequate cervical screening test has been performed in the preceding 3 years and 6 months</i> for 2021/22</li>
-<li>QOF_ACHV_CS006 - Percentage Achievement of CS006 - <i>The percentage of women eligible for screening and aged 50-64 years at the end of the reporting period whose notes record that an adequate cervical screening test has been performed in the preceding 5 years and 6 months</i> for 2021/22</li>
-<li>QOF_ACHV_DEM004 - Percentage Achievement of DEM004 - <i>The percentage of patients diagnosed with dementia whose care plan has been reviewed in a face-to-face review in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_DEP003 - Percentage Achievement of DEP003 - <i>The percentage of patients aged 18 or over  with a new diagnosis of depression in the preceding 1 April to 31 March who have been reviewed not earlier than 10 days after and not later than 56 days after the date of diagnosis</i> for 2021/22</li>
-<li>QOF_ACHV_DM006 - Percentage Achievement of DM006 - <i>The percentage of patients with diabetes, on the register, with a diagnosis of nephropathy (clinical proteinuria) or micro-albuminuria who are currently treated with an ACE-I (or ARBs)</i> for 2021/22</li>
-<li>QOF_ACHV_DM012 - Percentage Achievement of DM012 - <i>The percentage of patients with diabetes, on the register, with a record of a foot examination and risk classification: 1) low risk (normal sensation, palpable pulses), 2) increased risk (neuropathy or absent pulses), 3) high risk (neuropathy or absent pulses plus deformity or skin changes in previous ulcer) or 4) ulcerated foot within the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_DM014 - Percentage Achievement of DM014 - <i>The percentage of patients newly diagnosed with diabetes, on the register, in the  preceding 1 April to 31 March who have a record of being referred to a structured education programme within 9 months after entry on to the diabetes register</i> for 2021/22</li>
-<li>QOF_ACHV_DM019 - Percentage Achievement of DM019 - <i>The percentage of patients with diabetes, on the register, without moderate or severe frailty in whom the last blood pressure reading (measured in the preceding 12 months) is 140/80 mmHg or less</i> for 2021/22</li>
-<li>QOF_ACHV_DM020 - Percentage Achievement of DM020 - <i>The percentage of patients with diabetes, on the register, without moderate or severe frailty in whom the last IFCC-HbA1c is 58 mmol/mol or less in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_DM021 - Percentage Achievement of DM021 - <i>The percentage of patients with diabetes, on the register, with moderate or severe frailty in whom the last IFCC-HbA1c is 75 mmol/mol or less in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_DM022 - Percentage Achievement of DM022 - <i>The percentage of patients with diabetes, on the register, aged 40 years or over, with no history of CVD and without moderate or severe frailty, who are currently treated with a statin (excluding patients with type 2 diabetes and a CVD risk score of <10% recorded in the preceding 3 years)</i> for 2021/22</li>
-<li>QOF_ACHV_DM023 - Percentage Achievement of DM023 - <i>The percentage of patients with diabetes, on the register, and a history of CVD (excluding haemorrhagic stroke) who are currently treated with a statin</i> for 2021/22</li>
-<li>QOF_ACHV_HF003 - Percentage Achievement of HF003 - <i>In those patients with a current diagnosis of heart failure due to left ventricular systolic dysfunction, the percentage of patients who are currently treated with an ACE-I or ARB</i> for 2021/22</li>
-<li>QOF_ACHV_HF005 - Percentage Achievement of HF005 - <i>The percentage of patients with a diagnosis of heart failure on or after 1 April 2020 which: 1. Has been confirmed by an echocardiogram or by specialist assessment between 3 months before or 6 months after entering on to the register; or 2. If newly registered in the preceding 12 months, with no record of the diagnosis originally being confirmed by echocardiogram or specialist assessment, a record of an echocardiogram or a specialist assessment within 6 months of the date of registration</i> for 2021/22</li>
-<li>QOF_ACHV_HF006 - Percentage Achievement of HF006 - <i>The percentage of patients with a diagnosis of heart failure due to left ventricular systolic dysfunction, who are currently treated with a beta-blocker licensed for heart failure</i> for 2021/22</li>
-<li>QOF_ACHV_HF007 - Percentage Achievement of HF007 - <i>The percentage of patients with a diagnosis of heart failure on the register, who have had a review in the preceding 12 months, including an assessment of functional capacity and a review of medication to ensure medicines optimisation at maximal tolerated doses</i> for 2021/22</li>
-<li>QOF_ACHV_HYP003 - Percentage Achievement of HYP003 - <i>The percentage of patients aged 79 years or under, with hypertension, in whom the last blood pressure reading (measured in the preceding 12 months) is 140/90 mmHg or less</i> for 2021/22</li>
-<li>QOF_ACHV_HYP007 - Percentage Achievement of HYP007 - <i>The percentage of patients aged 80 years or over, with hypertension, in whom the last blood pressure reading (measured in the preceding 12 months) is 150/90 mmHg or less</i> for 2021/22</li>
-<li>QOF_ACHV_MH002 - Percentage Achievement of MH002 - <i>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a comprehensive care plan documented in the record, in the preceding 12 months, agreed between individuals, their family and/or carers as appropriate</i> for 2021/22</li>
-<li>QOF_ACHV_MH003 - Percentage Achievement of MH003 - <i>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of blood pressure in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_MH006 - Percentage Achievement of MH006 - <i>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of BMI in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_MH007 - Percentage Achievement of MH007 - <i>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of alcohol consumption in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_MH011 - Percentage Achievement of MH011 - <i>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of a lipid profile in the preceding 12 months (in those patients currently prescribed antipsychotics, and/or have pre-existing cardiovascular conditions, and/or smoke, and/or are overweight (BMI of >=23 kg/m2 or >=25 kg/m2 if ethnicity is recorded as White)) or preceding 24 months for all other patients</i> for 2021/22</li>
-<li>QOF_ACHV_MH012 - Percentage Achievement of MH012 - <i>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of blood glucose or HbA1c in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_NDH001 - Percentage Achievement of NDH001 - <i>The percentage of patients with non-diabetic hyperglycaemia who have had an HbA1c or fasting blood glucose performed in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_RA002 - Percentage Achievement of RA002 - <i>The percentage of patients with rheumatoid arthritis, on the register, who have had a face-to-face annual review in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_SMOK002 - Percentage Achievement of SMOK002 - <i>The percentage of patients with any or any combination of the following conditions: CHD, PAD, stroke or TIA, hypertension, diabetes, COPD, CKD, asthma, schizophrenia, bipolar affective disorder or other psychoses whose notes record smoking status in the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_SMOK004 - Percentage Achievement of SMOK004 - <i>The percentage of patients aged 15 or over who are recorded as current smokers who have a record of an offer of support and treatment within the preceding 24 months</i> for 2021/22</li>
-<li>QOF_ACHV_SMOK005 - Percentage Achievement of SMOK005 - <i>The percentage of patients with any or any combination of the following conditions: CHD, PAD, stroke or TIA, hypertension, diabetes, COPD, CKD, asthma, schizophrenia, bipolar affective disorder or other psychoses who are recorded as current smokers who have a record of an offer of support and treatment within the preceding 12 months</i> for 2021/22</li>
-<li>QOF_ACHV_STIA007 - Percentage Achievement of STIA007 - <i>The percentage of patients with a stroke shown to be non-haemorrhagic, or a history of TIA, who have a record in the preceding 12 months that an anti-platelet agent, or an anti-coagulant is being taken</i> for 2021/22</li>
-<li>QOF_ACHV_STIA010 - Percentage Achievement of STIA010 - <i>The percentage of patients aged 79 years or under, with a history of stroke or TIA, in whom the last blood pressure reading (measured in the preceding 12 months) is 140/90 mmHg or less</i> for 2021/22</li>
-<li>QOF_ACHV_STIA011 - Percentage Achievement of STIA011 - <i>The percentage of patients aged 80 years or over, with a history of stroke or TIA, in whom the last blood pressure reading (measured in the preceding 12 months) is 150/90 mmHg or less</i> for 2021/22</li>
-<li>QOF_ACHV_VI001 - Percentage Achievement of VI001 - <i>The percentage of babies who reached 8 months old in the preceding 12 months, who have received at least 3 doses of a diphtheria, tetanus and pertussis containing vaccine before the age of 8 months</i> for 2021/22</li>
-<li>QOF_ACHV_VI002 - Percentage Achievement of VI002 - <i>The percentage of children who reached 18 months old in the preceding 12 months, who have received at least 1 dose of MMR between the ages of 12 and 18 months</i> for 2021/22</li>
-<li>QOF_ACHV_VI003 - Percentage Achievement of VI003 - <i>The percentage of children who reached 5 years old in the preceding 12 months, who have received a reinforcing dose of DTaP/IPV and at least 2 doses of MMR between the ages of 1 and 5 years</i> for 2021/22</li>
-<li>QOF_ACHV_VI004 - Percentage Achievement of VI004 - <i>The percentage of patients who reached 80 years old in the preceding 12 months, who have received a shingles vaccine between the ages of 70 and 79 years</i> for 2021/22</li>
+  <li>Cardiovascular</li>
+  <ul>
+    <li>Atrial fibrillation</li>
+    <ul>
+      <li>af006 - [AF006]</li>
+      <ul>
+        <li>The percentage of patients with atrial fibrillation in whom stroke risk has been assessed using the CHA2DS2-VASc score risk stratification scoring system in the preceding 12 months (excluding those patients with a previous CHADS2 or CHA2DS2-VASc score of 2 or more)</li>
+      </ul>
+      <li>af007 - [AF007]</li>
+      <ul><li>In those patients with atrial fibrillation with a record of a CHA2DS2-VASc score of 2 or more, the percentage of patients who are currently treated with anticoagulation drug therapy</li>
+      </ul>
+    </ul>
+    <li>Blood pressure</li>
+    <ul>
+      <li>bp002 - [BP002]</li>
+      <ul>
+        <li>The percentage of patients aged 45 or over who have a record of blood pressure in the preceding 5 years</li>
+      </ul>
+    </ul>
+    <li>Coronary heart disease</li>
+    <ul>
+      <li>chd005 - [CHD005]</li>
+      <ul>
+        <li>The percentage of patients with coronary heart disease with a record in the preceding 12 months that aspirin, an alternative anti-platelet therapy, or an anti-coagulant is being taken</li>
+      </ul>
+      <li>chd008 - [CHD008]</li>
+      <ul>
+        <li>The percentage of patients aged 79 years or under, with coronary heart disease, in whom the last blood pressure reading (measured in the preceding 12 months) is 140/90 mmHg or less</li>
+      </ul>
+      <li>chd009 - [CHD009]</li>
+      <ul>
+        <li>The percentage of patients aged 80 years or over, with coronary heart disease, in whom the last blood pressure reading (measured in the preceding 12 months) is 150/90 mmHg or less</li>
+      </ul>
+    </ul>
+    <li>Heart failure</li>
+    <ul>
+      <li>hf003 - [HF003]</li>
+      <ul>
+        <li>In those patients with a current diagnosis of heart failure due to left ventricular systolic dysfunction, the percentage of patients who are currently treated with an ACE-I or ARB</li>
+      </ul>
+      <li>hf005 - [HF005]</li>
+      <ul>
+        <li>The percentage of patients with a diagnosis of heart failure on or after 1 April 2020 which:
+1.	Has been confirmed by an echocardiogram or by specialist assessment between 3 months before or 6 months after entering on to the register; or
+2.	If newly registered in the preceding 12 months, with no record of the diagnosis originally being confirmed by echocardiogram or specialist assessment, a record of an echocardiogram or a specialist assessment within 6 months of the date of registration.</li>
+      </ul>
+      <li>hf006 - [HF006]</li>
+      <ul>
+        <li>The percentage of patients with a diagnosis of heart failure due to left ventricular systolic dysfunction, who are currently treated with a beta-blocker licensed for heart failure.</li>
+      </ul>
+      <li>hf007 - [HF007]</li>
+      <ul>
+        <li>The percentage of patients with a diagnosis of heart failure on the register, who have had a review in the preceding 12 months, including an assessment of functional capacity and a review of medication to ensure medicines optimisation at maximal tolerated doses.</li>
+      </ul>
+    </ul>
+    <li>Hypertension</li>
+    <ul>
+      <li>hyp003 - [HYP003]</li>
+      <ul>
+        <li>The percentage of patients aged 79 years or under, with hypertension, in whom the last blood pressure reading (measured in the preceding 12 months) is 140/90 mmHg or less.</li>
+      </ul>
+      <li>hyp007 - [HYP007]</li>
+      <ul>
+        <li>The percentage of patients aged 80 years or over, with hypertension, in whom the last blood pressure reading (measured in the preceding 12 months) is 150/90 mmHg or less.</li>
+      </ul>
+    </ul>
+    <li>Stroke and transient ischaemic attack</li>
+    <ul>
+      <li>stia007 - [STIA007]</li>
+      <ul>
+        <li>The percentage of patients with a stroke shown to be non-haemorrhagic, or a history of TIA, who have a record in the preceding 12 months that an anti-platelet agent, or an anti-coagulant is being taken </li>
+      </ul>
+      <li>stia010 - [STIA010]</li>
+      <ul>
+        <li>The percentage of patients aged 79 years or under, with a history of stroke or TIA, in whom the last blood pressure reading (measured in the preceding 12 months) is 140/90 mmHg or less.</li>
+      </ul>
+      <li>stia011 - [STIA011]</li>
+      <ul>
+        <li>The percentage of patients aged 80 years or over, with a history of stroke or TIA, in whom the last blood pressure reading (measured in the preceding 12 months) is 150/90 mmHg or less.</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Respiratory</li>
+  <ul>
+    <li>Asthma</li>
+    <ul>
+      <li>ast006 - [AST006]</li>
+      <ul>
+        <li>The percentage of patients with asthma on the register from 1 April 2020 with either:
+1.	A record of spirometry and one other objective test (FeNO or reversibility or variability) between 3 months before or 6 months after diagnosis; or
+2.	If newly registered in the preceding 12 months with a diagnosis of asthma recorded on or after 1 April 2020 but no record of objective tests being performed before the date of registration, with a record of spirometry and one other objective test (FeNO or reversibility or variability) recorded within 6 months of registration.</li>
+      </ul>
+      <li>ast007 - [AST007]</li>
+      <ul>
+        <li>The percentage of patients with asthma, on the register, who have had an asthma review in the preceding 12 months that includes an assessment of asthma control using a validated asthma control questionnaire, a recording of the number of exacerbations, an assessment of inhaler technique and a written personalised asthma plan.</li>
+      </ul>
+      <li>ast008 - [AST008]</li>
+      <ul>
+        <li>The percentage of patients with asthma on the register aged 19 years or under, in whom there is a record of either personal smoking status or exposure to secondhand smoke in the preceding 12 months.</li>
+      </ul>
+    </ul>
+    <li>Chronic obstructive pulmonary disease</li>
+    <ul>
+      <li>copd008 - [COPD008]</li>
+      <ul>
+        <li></li>The percentage of patients with COPD and Medical Research Council (MRC) dyspnoea scale ≥3 at any time in the preceding 12 months, with a subsequent record of an offer of referral to a pulmonary rehabilitation programme (excluding those who have previously attended a pulmonary rehabilitation programme).</li>
+      </ul>
+      <li>copd010 - [COPD010]</li>
+      <ul>
+        <li>The percentage of patients with COPD, on the register, who have had a review in the preceding 12 months which included:
+A record of the number of exacerbations 
+AND
+An assessment of breathlessness using the Medical Research Council dyspnoea scale.</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Long term conditions</li>
+  <ul>
+    <li>Cancer</li>
+    <ul>
+      <li>can004 - [CAN004]</li>
+      <ul>
+        <li>The percentage of patients with cancer, diagnosed within the preceding 15 months, who have a patient review recorded as occurring within 6 months of the contractor receiving confirmation of diagnosis</li>
+      </ul>
+      <li>can005 - [CAN005]</li>
+      <ul>
+        <li>The percentage of patients with cancer, diagnosed within the preceding 12 months, who have had the opportunity for a discussion and informed of the support available from primary care, within 3 months of diagnosis.</li>
+      </ul>
+    </ul>
+    <li>Diabetes mellitus</li>
+    <ul>
+      <li>dm006 - [DM006]</li>
+      <ul>
+        <li>The percentage of patients with diabetes, on the register, with a diagnosis of nephropathy (clinical proteinuria) or micro-albuminuria who are currently treated with an ACE-I (or ARBs)</li>
+      </ul>
+      <li>dm012 - [DM012]</li>
+      <ul>
+        <li>The percentage of patients with diabetes, on the register, with a record of a foot examination and risk classification: 1) low risk (normal sensation, palpable pulses), 2) increased risk (neuropathy or absent pulses), 3) high risk (neuropathy or absent pulses plus deformity or skin changes in previous ulcer) or 4) ulcerated foot within the preceding 12 months</li>
+      </ul>
+      <li>dm014 - [DM014]</li>
+      <ul>
+        <li>The percentage of patients newly diagnosed with diabetes, on the register, in the  preceding 1 April to 31 March who have a record of being referred to a structured education programme within 9 months after entry on to the diabetes register</li>
+      </ul>
+      <li>dm019 - [DM019]</li>
+      <ul>
+        <li>The percentage of patients with diabetes, on the register, without moderate or severe frailty in whom the last blood pressure reading (measured in the preceding 12 months) is 140/80 mmHg or less.</li>
+      </ul>
+      <li>dm020 - [DM020]</li>
+      <ul>
+        <li>The percentage of patients with diabetes, on the register, without moderate or severe frailty in whom the last IFCC-HbA1c is 58 mmol/mol or less in the preceding 12 months.</li>
+      </ul>
+      <li>dm021 - [DM021]</li>
+      <ul>
+        <li>The percentage of patients with diabetes, on the register, with moderate or severe frailty in whom the last IFCC-HbA1c is 75 mmol/mol or less in the preceding 12 months.</li>
+      </ul>
+      <li>dm022 - [DM022]</li>
+      <ul>
+        <li>The percentage of patients with diabetes, on the register, aged 40 years or over, with no history of CVD and without moderate or severe frailty, who are currently treated with a statin (excluding patients with type 2 diabetes and a CVD risk score of <10% recorded in the preceding 3 years).</li>
+        </ul>
+      <li>dm023 - [DM023]</li>
+      <ul>
+        <li>The percentage of patients with diabetes, on the register, and a history of CVD (excluding haemorrhagic stroke) who are currently treated with a statin.</li>
+      </ul>
+    </ul>
+    <li>Non-diabetic hyperglycaemia</li>
+    <ul>
+      <li>ndh001 - [NDH001]</li>
+      <ul>
+        <li>The percentage of patients with non-diabetic hyperglycaemia who have had an HbA1c or fasting blood glucose performed in the preceding 12 months.</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Mental health</li>
+  <ul>
+    <li>Dementia</li>
+    <ul>
+      <li>dem004 - [DEM004]</li>
+      <ul>
+        <li>The percentage of patients diagnosed with dementia whose care plan has been reviewed in a face-to-face review in the preceding 12 months</li>
+      </ul>
+    </ul>
+    <li>Depression</li>
+    <ul>
+      <li>dep003 - [DEP003]</li>
+      <ul>
+        <li>The percentage of patients aged 18 or over  with a new diagnosis of depression in the preceding 1 April to 31 March who have been reviewed not earlier than 10 days after and not later than 56 days after the date of diagnosis</li>
+      </ul>
+    </ul>
+    <li>Mental health</li>
+    <ul>
+      <li>mh002 - [MH002]</li>
+      <ul>
+        <li>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a comprehensive care plan documented in the record, in the preceding 12 months, agreed between individuals, their family and/or carers as appropriate</li>
+      </ul>
+      <li>mh003 - [MH003]</li>
+      <ul>
+        <li>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of blood pressure in the preceding 12 months</li>
+      </ul>
+      <li>mh006 - [MH006]</li>
+      <ul>
+        <li>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of BMI in the preceding 12 months.</li>
+      </ul>
+      <li>mh007 - [MH007]</li>
+      <ul>
+        <li>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of alcohol consumption in the preceding 12 months.</li>
+      </ul>
+      <li>mh011 - [MH011]</li>
+      <ul>
+        <li>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of a lipid profile in the preceding 12 months (in those patients currently prescribed antipsychotics, and/or have pre-existing cardiovascular conditions, and/or smoke, and/or are overweight (BMI of >=23 kg/m2 or >=25 kg/m2 if ethnicity is recorded as White)) or preceding 24 months for all other patients</li>
+      </ul>
+      <li>mh012 - [MH012]</li>
+      <ul>
+        <li>The percentage of patients with schizophrenia, bipolar affective disorder and other psychoses who have a record of blood glucose or HbA1c in the preceding 12 months</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Musculoskeletal</li>
+  <ul>
+    <li>Rheumatoid arthritis</li>
+    <ul>
+      <li>ra002 - [RA002]</li>
+      <ul>
+        <li>The percentage of patients with rheumatoid arthritis, on the register, who have had a face-to-face annual review in the preceding 12 months</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Lifestyle</li>
+  <ul>
+    <li>Smoking</li>
+    <ul>
+      <li>smok002 - [SMOK002]</li>
+      <ul>
+        <li>The percentage of patients with any or any combination of the following conditions: CHD, PAD, stroke or TIA, hypertension, diabetes, COPD, CKD, asthma, schizophrenia, bipolar affective disorder or other psychoses whose notes record smoking status in the preceding 12 months</li>
+      </ul>
+      <li>smok004 - [SMOK004]</li>
+      <ul>
+        <li>The percentage of patients aged 15 or over who are recorded as current smokers who have a record of an offer of support and treatment within the preceding 24 months</li>
+      </ul>
+      <li>smok005 - [SMOK005]</li>
+      <ul>
+        <li>The percentage of patients with any or any combination of the following conditions: CHD, PAD, stroke or TIA, hypertension, diabetes, COPD, CKD, asthma, schizophrenia, bipolar affective disorder or other psychoses who are recorded as current smokers who have a record of an offer of support and treatment within the preceding 12 months</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Fertility, obstetrics and gynaecology</li>
+  <ul>
+    <li>Cervical screening</li>
+    <ul>
+      <li>cs005 - [CS005]</li>
+      <ul>
+        <li>The percentage of women eligible for screening and aged 25-49 years at the end of the reporting period whose notes record that an adequate cervical screening test has been performed in the preceding 3 years and 6 months.</li>
+      </ul>
+      <li>cs006 - [CS006]</li>
+      <ul>
+        <li>The percentage of women eligible for screening and aged 50-64 years at the end of the reporting period whose notes record that an adequate cervical screening test has been performed in the preceding 5 years and 6 months.</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Vaccination and immunisation</li>
+  <ul>
+    <li>Vaccination and immunisation</li>
+    <ul>
+      <li>vi001 - [VI001]</li>
+      <ul>
+        <li>The percentage of babies who reached 8 months old in the preceding 12 months, who have received at least 3 doses of a diphtheria, tetanus and pertussis containing vaccine before the age of 8 months.</li>
+      </ul>
+      <li>vi002 - [VI002]</li>
+      <ul>
+        <li>The percentage of children who reached 18 months old in the preceding 12 months, who have received at least 1 dose of MMR between the ages of 12 and 18 months.</li>
+      </ul>
+      <li>vi003 - [VI003]</li>
+      <ul>
+        <li>The percentage of children who reached 5 years old in the preceding 12 months, who have received a reinforcing dose of DTaP/IPV and at least 2 doses of MMR between the ages of 1 and 5 years.</li>
+      </ul>
+      <li>vi004 - [VI004]</li>
+      <ul>
+        <li>The percentage of patients who reached 80 years old in the preceding 12 months, who have received a shingles vaccine between the ages of 70 and 79 years.</li>
+      </ul>
+    </ul>
+  </ul>
+  <li>Quality improvement</li>
+  <ul>
+    <li>Prescription drug dependency</li>
+    <ul>
+      <li>qipddmi001 - [QIPDDMI001]</li>
+      <ul>
+        <li>Number of patients newly prescribed a medicine that may cause dependence, as a percentage of all patients aged 18 years or over and prescribed a medicine that may cause dependence.</li>
+      </ul>
+      <li>qipddmi002 - [QIPDDMI002]</li>
+      <ul>
+        <li>Percentage of patients continuously prescribed a medicine which may cause dependence (opioids, gabapentinoids, benzodiazepines and z-drugs) in the last three months of the previous financial year (but not for 6 months or more), who, in the three months up to and including the end of the reporting period were no longer prescribed a medicine which may cause dependence.</li>
+      </ul>
+      <li>qipddmi003 - [QIPDDMI003]</li>
+      <ul>
+        <li>Percentage of patients aged 18 years or over and continuously prescribed a medicine which may cause dependence (opioids, gabapentinoids, benzodiazepines and z-drugs) in the last six months of the previous financial year, who, in the three months to the end of the reporting period were no longer prescribed a medicine which may cause dependence.</li>
+      </ul>
+      <li>qipddmi004 - [QIPDDMI004]</li>
+      <ul>
+        <li>Percentage of patients aged 18 years or over and with chronic pain who were referred to a social prescribing service.</li>
+      </ul>
+    </ul>
+  </ul>
 </ul>
 <hr>
+
 <h3>QOF Prevalance Fields</h3>
 <ul>
-<li>QOF_PREV_AF - Percentage Prevalence of AF - Atrial fibrillation for 2021/22</li>
-<li>QOF_PREV_AST - Percentage Prevalence of AST - Asthma for 2021/22</li>
-<li>QOF_PREV_CAN - Percentage Prevalence of CAN - Cancer for 2021/22</li>
-<li>QOF_PREV_CHD - Percentage Prevalence of CHD - Coronary heart disease for 2021/22</li>
-<li>QOF_PREV_CKD - Percentage Prevalence of CKD - Chronic kidney disease for 2021/22</li>
-<li>QOF_PREV_COPD - Percentage Prevalence of COPD - Chronic obstructive pulmonary disease for 2021/22</li>
-<li>QOF_PREV_DEM - Percentage Prevalence of DEM - Dementia for 2021/22</li>
-<li>QOF_PREV_DEP - Percentage Prevalence of DEP - Depression for 2021/22</li>
-<li>QOF_PREV_DM - Percentage Prevalence of DM - Diabetes mellitus for 2021/22</li>
-<li>QOF_PREV_EP - Percentage Prevalence of EP - Epilepsy for 2021/22</li>
-<li>QOF_PREV_HF - Percentage Prevalence of HF - Heart failure for 2021/22</li>
-<li>QOF_PREV_HYP - Percentage Prevalence of HYP - Hypertension for 2021/22</li>
-<li>QOF_PREV_LD - Percentage Prevalence of LD - Learning disability for 2021/22</li>
-<li>QOF_PREV_MH - Percentage Prevalence of MH - Mental health for 2021/22</li>
-<li>QOF_PREV_NDH - Percentage Prevalence of NDH - Non-diabetic hyperglycaemia for 2021/22</li>
-<li>QOF_PREV_OB - Percentage Prevalence of OB - Obesity for 2021/22</li>
-<li>QOF_PREV_OST - Percentage Prevalence of OST - Osteoporosis for 2021/22</li>
-<li>QOF_PREV_PAD - Percentage Prevalence of PAD - Peripheral arterial disease for 2021/22</li>
-<li>QOF_PREV_PC - Percentage Prevalence of PC - Pallative care for 2021/22</li>
-<li>QOF_PREV_RA - Percentage Prevalence of RA - Rheumatoid arthritis for 2021/22</li>
-<li>QOF_PREV_STIA - Percentage Prevalence of STIA - Stroke and transient ischaemic attack for 2021/22</li>
+  <li>Cardiovascular</li>
+  <ul>
+    <li>af - [Atrial fibrillation]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with atrial fibrillation</li>
+    </ul>
+    <li>chd - [Coronary heart disease]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with coronary heart disease</li>
+    </ul>
+    <li>hf - [Heart Failure]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with heart failure</li>
+    </ul>
+    <li>hyp - [Hypertension]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with established hypertension</li>
+    </ul>
+    <li>pad - [Peripheral arterial disease]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with peripheral arterial disease</li>
+    </ul>
+    <li>stia - [Stroke and transient ischaemic attack]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with stroke or TIA</li>
+    </ul>
+  </ul>
+  <li>Respiratory</li>
+  <ul>
+    <li>ast - [Asthma]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with asthma, aged 6 years or over, excluding patients with asthma who have been prescribed no asthma-related drugs in the preceding 12 months.</li>
+    </ul>
+    <li>copd - [Chronic obstructive pulmonary disease]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of:
+    1.	Patients with a clinical diagnosis of COPD before 1 April 2021; and
+    2.	Patients with a clinical diagnosis of COPD on or after 1 April 2021 whose diagnosis has been confirmed by a quality assured post-bronchodilator spirometry FEV1/FVC ratio below 0.7 between 3 months before or 6 months after diagnosis (or if newly registered in the preceding 12 months without a record of spirometry having been performed, a record of an FEV1/FVC ratio below 0.7 recorded within 6 months of registration); and
+    3.	Patients with a clinical diagnosis of COPD on or after 1 April 2021 who are unable to undertake spirometry.</li>
+    </ul>
+  </ul>
+  <li>Long term conditions</li>
+  <ul>
+    <li>can - [Cancer]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of all cancer patients defined as a ‘register of patients with a diagnosis of cancer excluding non-melanotic skin cancers diagnosed on or after 1 April 2003’</li>
+    </ul>
+    <li>ckd - [Chronic kidney disease]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients aged 18 or over with CKD with classification of categoris G3a to G5 (previously stage 3 to 5)</li>
+    </ul>
+    <li>dm - [Diabetes mellitus]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of all patients aged 17 or over with diabetes mellitus, which specifies the type of diabetes where a diagnosis has been confirmed</li>
+    </ul>
+    <li>ndh - [Non-diabetic hyperglycaemia]</li>
+    <ul>
+      <li>The percentage of patients with non-diabetic hyperglycaemia who have had an HbA1c or fasting blood glucose performed in the preceding 12 months.</li>
+    </ul>
+    <li>pc - [Pallative care]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register  of all patients in need of palliative care/support irrespective of age</li>
+    </ul>
+  </ul>
+  <li>Mental health</li>
+  <ul>
+    <li>dem - [Dementia]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients diagnosed with dementia </li>
+    </ul>
+    <li>dep - [Depression]</li>
+    <ul>
+      <li>The percentage of patients aged 18 or over  with a new diagnosis of depression in the preceding 1 April to 31 March who have been reviewed not earlier than 10 days after and not later than 56 days after the date of diagnosis</li>
+    </ul>
+    <li>ep - [Epilepsy]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients aged 18 or over receiving drug treatment for epilepsy</li>
+    </ul>
+    <li>ld - [Learning disability]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with learning disabilities</li>
+    </ul>
+    <li>mh - [Mental health]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients with schizophrenia, bipolar affective disorder and other psychoses and other patients on lithium therapy.</li>
+    </ul>
+  </ul>
+  <li>Musculoskeletal</li>
+  <ul>
+    <li>ost - [Osteoporosis]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients: 
+    1. Aged 50 or over and who have not attained  the age of 75 with a record of a fragility fracture on or after 1 April 2012 and a diagnosis of osteoporosis confirmed on DXA scan, and 
+    2. Aged 75 or over with a record of a fragility fracture on or after 1 April 2014 and a diagnosis of osteoperosis</li>
+    </ul>
+    <li>ra - [Rheumatoid arthritis]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients aged 16 or over with rheumatoid arthritis</li>
+    </ul>
+  </ul>
+  <li>Lifestyle</li>
+  <ul>
+    <li>ob - [Obesity]</li>
+    <ul>
+      <li>The contractor establishes and maintains a register of patients aged 18 years or over with a BMI ≥30 in the preceding 12 months</li>
+    </ul>
+  </ul>
 </ul>
 <hr>
 <h3>IMD Domain and Sub-Domain Fields</h3>
 <ul>
-<li>IMD_SCORE - Indices of Multiple Deprivation (IMD) Score</li>
-<li>INCOME_SCORE - Income IMD Domain Score</li>
-<li>EMPLOYMENT_SCORE - Employment IMD Domain Score</li>
-<li>EDUCATION_SCORE - Education IMD Domain Score</li>
-<li>HEALTH_SCORE - Health IMD Domain Score</li>
-<li>CRIME_SCORE - Crime IMD Domain Score</li>
-<li>HOUSING_SCORE - Barriers to Housing and Services IMD Domain Score</li>
-<li>ENVIRONMENT_SCORE - Living Environment IMD Domain Score</li>
-<li>IDACI_SCORE - Income Deprivation Affecting Children Indicator (IDACI) Score</li>
-<li>IDAOPI_SCORE - Income Deprivation Affecting Older People Indicator (IDAOPI) Score</li>
-<li>CYP_SCORE - Children and Young People IMD Sub-Domain Score</li>
-<li>ADULT_SCORE - Adult Skills</li>
-<li>GEOGRAPHICAL_SCORE - Geographical Barriers</li>
-<li>WIDER_BARRIERS_SCORE - Wider Barriers</li>
-<li>INDOORS_SCORE - Indoor Environment</li>
-<li>OUTDOORS_SCORE - Outdoor Environment</li>
+<li>imd - Indices of Multiple Deprivation (IMD) Score</li>
+<li>income_domain - Income IMD Domain Score</li>
+<li>employment_domain - Employment IMD Domain Score</li>
+<li>education_domain - Education IMD Domain Score</li>
+<li>health_domain - Health IMD Domain Score</li>
+<li>crime_domain - Crime IMD Domain Score</li>
+<li>housing_and_services_domain - Barriers to Housing and Services IMD Domain Score</li>
+<li>environment_domain - Living Environment IMD Domain Score</li>
+<li>idaci_subdomain - Income Deprivation Affecting Children Indicator (IDACI) Score</li>
+<li>idaopi_subdomain - Income Deprivation Affecting Older People Indicator (IDAOPI) Score</li>
+<li>children_edu_subdomain - Children and Young People IMD Sub-Domain Score</li>
+<li>adult_edu_subdomain - Adult Skills</li>
+<li>geographical_barriers_subdomain - Geographical Barriers</li>
+<li>wider_barriers_subdomain - Wider Barriers</li>
+<li>indoors_subdomain - Indoor Environment</li>
+<li>outdoors_subdomain - Outdoor Environment</li>
 </ul>
 <hr>
 <h3>IMD Underlying Indicator Fields</h3>
 <ul>
-<li>DOM_INCOME_INCOME_NUMERATOR - Income Domain: Income Indicator Numerator</li>
-<li>DOM_INCOME_IDACI_NUMERATOR - Income Domain: IDACI Numerator</li>
-<li>DOM_INCOME_IDAOPI_NUMERATOR - Income Domain: IDAOPI Numerator</li>
-<li>DOM_EMPLOYMENT_EMPLOYMENT_NUMERATOR - Employment Domain: Employment Numerator</li>
-<li>DOM_EDUCATION_PCT_NOT_IN_EDUCATION_POST_16 - Education Domain: Not in Education Post 16 Proportion</li>
-<li>DOM_EDUCATION_PCT_NOT_IN_HIGHER_EDUCATION - Education Domain: Not in Higher Education Proportion</li>
-<li>DOM_EDUCATION_PCT_LOW_ADULT_SKILLS_AND_LANGUAGE - Education Domain: Low Adult skills and Low English Proficiency combined Proportion</li>
-<li>DOM_HEALTH_YEARS_LIFE_LOST_INDICATOR - Health Domain: Year of Potential Life Lost Indicator</li>
-<li>DOM_HEALTH_COMPARITIVE_ILLNESS_DISABILITY_INDICATOR - Health Domain: Comparative Illness and Disability Ratio Indicator</li>
-<li>DOM_HEALTH_ACUTE_MORBIDITy_INDICATOR - Health Domain: Acute Morbidity Indicator</li>
-<li>DOM_HEALTH_MOOD_AND_ANXIETY_INDICATOR - Health Domain: Mood and Anxiety Disorders Indicator</li>
-<li>DOM_BARRIERS_POST_OFFICE_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest Post Office</li>
-<li>DOM_BARRIERS_PRIMARY_SCHOOL_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest Primary School</li>
-<li>DOM_BARRIERS_SUPERMARKET_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest General Store or Supermarket</li>
-<li>DOM_BARRIERS_PRACTICE_DISTANCE - Barriers to housing and Services Domain: Average Distance in km to Nearest GP Surgery</li>
-<li>DOM_BARRIERS_OVERCROWDING - Barriers to housing and Services Domain: Proportion of Households Claased as Overcrowded</li>
-<li>DOM_BARRIERS_HOMELESSNESS_RATE - Barriers to housing and Services Domain: Rate of Acceptance of Housing Assistance under Homelessness Provisions</li>
-<li>DOM_BARRIERS_OWNER_AFFORDABILITY - Barriers to housing and Services Domain: Owner Occupation Affordability Indicator</li>
-<li>DOM_BARRIERS_RENTAL_AFFORDABILITY - Barriers to housing and Services Domain: Private Rental Affordability Indicator</li>
-<li>DOM_BARRIERS_HOUSING_AFFORDABILITY - Barriers to housing and Services Domain: Combined Owner Occupier and Private Rental Affordability Indicator</li>
-<li>DOM_ENVIRONMENT_POOR_CONDITION_HOUSING - Living Environment Domain: Proportion of Housing in Poor Condition</li>
-<li>DOM_ENVIRONMENT_NO_CENTRAL_HEATING - Living Environment Domain: Proportion of Housing with No Central Heating</li>
-<li>DOM_ENVIRONMENT_ROAD_TRAFFIC_ACCIDENTS - Living Environment Domain: Accidents resulting in Death or Personal Injury to Pedestrian or Cyclist Indicator</li>
-<li>DOM_ENVIRONMENT_NITROGEN_DIOXIDE - Living Environment Domain: Estimate of Concentration of Nitrogen Dioxide in Air</li>
-<li>DOM_ENVIRONMENT_BENZENE - Living Environment Domain: Estimate of Concentration of Benzene in Air</li>
-<li>DOM_ENVIRONMENT_SULPHUR_DIOXIDE - Living Environment Domain: Estimate of Concentration of Sulphur Dioxide in Air</li>
-<li>DOM_ENVIRONMENT_PARTICULATES - Living Environment Domain: Estimate of Concentration of Particulates in Air</li>
-<li>DOM_ENVIRONMENT_AIR_QUALITY - Living Environment Domain: Combined Air Quality Indicator</li>
+  <li>Income Domain</li>
+  <ul>
+    <li>income_numerator - Income Indicator Numerator</li>
+    <li>idaci_numerator - IDACI Numerator</li>
+    <li>idopi_numerator - IDAOPI Numerator</li>
+  </ul>
+  <li>Employment Domain</li>
+  <ul>
+    <li>employment_numerator - Employment Numerator</li>
+  </ul>
+  <li>Education Domain</li>
+  <ul>
+    <li>post_16_education_numerator - Not in Education Post 16 Proportion</li>
+    <li>entry_to_higher_edu_numerator - Not in Higher Education Proportion</li>
+    <li>adult_skills_numerator - Low Adult skills and Low English Proficiency combined Proportion</li>
+  </ul>
+  <li>Health Domain</li>
+  <ul>
+    <li>year_of_life_lost - Year of Potential Life Lost Indicator</li>
+    <li>comparative_illness_and_disability - Comparative Illness and Disability Ratio Indicator</li>
+    <li>acute_morbidity - Acute Morbidity Indicator</li>
+    <li>mood_and_anxiety_disorders - Mood and Anxiety Disorders Indicator</li>
+  </ul>
+  <li>Barriers to housing and Services Domain</li>
+  <ul>
+    <li>post_office_distance - Average Distance in km to Nearest Post Office</li>
+    <li>primary_school_distance - Average Distance in km to Nearest Primary School</li>
+    <li>general_store_distance - Average Distance in km to Nearest General Store or Supermarket</li>
+    <li>gp_distance - Average Distance in km to Nearest GP Surgery</li>
+    <li>household_overcrowding - Proportion of Households Claased as Overcrowded</li>
+    <li>homelessness_indicator - Rate of Acceptance of Housing Assistance under Homelessness Provisions</li>
+    <li>owner_occupation_affordability - Owner Occupation Affordability Indicator</li>
+    <li>private_rental_affordability - Private Rental Affordability Indicator</li>
+    <li>housing_affordability - Combined Owner Occupier and Private Rental Affordability Indicator</li>
+  </ul>
+  <li>Living Environment Domain</li>
+  <ul>
+    <li>poor_quality_housing - Proportion of Housing in Poor Condition</li>
+    <li>housing_without_central_heating - Proportion of Housing with No Central Heating</li>
+    <li>traffic_accidents - Accidents resulting in Death or Personal Injury to Pedestrian or Cyclist Indicator</li>
+    <li>nitrogen_dioxide - Estimate of Concentration of Nitrogen Dioxide in Air</li>
+    <li>benzene - Estimate of Concentration of Benzene in Air</li>
+    <li>sulphur_dioxide - Estimate of Concentration of Sulphur Dioxide in Air</li>
+    <li>particulates - Estimate of Concentration of Particulates in Air</li>
+    <li>air_quality - Combined Air Quality Indicator</li>    
+  </ul>
 </ul>
 <hr>
-<h3>General Practice Workforce Fields</h3>
+<h3>Ethnicity Fields</h3>
 <ul>
-<li>TOTAL_GP_FTE - Number of Full Time Equivalent GPs</li>
-<li>TOTAL_NURSES_FTE - Number of Full Time Equivalent Nurses</li>
-<li>TOTAL_DPC_FTE - Number of Full Time Equivalent Direct Patient Care Roles (not GP nor Nurse)</li>
-<li>TOTAL_ADMIN_FTE - Number of Full Time Equivalent Administrative Roles</li>
+  <li>asian - Ethnic group: Asian, Asian British or Asian Welsh</li>
+  <li>black - Ethnic group: Black, Black British, Black Welsh, Caribbean or African</li>
+  <li>mixed - Ethnic group: Mixed or Multiple ethnic groups</li>
+  <li>white - Ethnic group: White</li>
+  <li>other - Ethnic group: Other ethnic group</li>
 </ul>
+<hr>
+<h3>Workforce Fields</h3>
+<ul>
+  <li>gp_fte - Total General Practitioners (Full-time Equivalent)</li>
+  <li>nurse_fte - Total Nursing staff (Full-time Equivalent)</li>
+  <li>dpc_fte - Total Direct Patient Care staff (Full-time Equivalent)</li>
+  <li>admin_fte - Total Administrative staff (Full-time Equivalent)</li>
+</ul>
+<hr>
+<h3>Income Fields</h3>
+<ul>
+  <li>Practice</li>
+  <ul>
+      <li>income_per_head_popn - Average payments per weighted patient including PCN Workforce, Leadership and Support</li>  
+  </ul>
+  <li>Primary Care Network (PCN)</li>
+  <ul>
+      <li>income_per_head_popn - Sum of the following divided by the registered population of the PCN</li>
+      <ul>
+        <li>PCN Participation</li>
+        <li>PCN Leadership</li>
+        <li>PCN Support</li>
+        <li>PCN Workforce</li>
+        <li>PCN Care Home Premium</li>
+        <li>PCN Extended Hours Access</li>	
+        <li>PCN Investment and impact Fund</li>
+      </ul>
+  </ul>
+</ul>
+
 <!-- Commented out
 <hr>
 <h3>Organisation Cluster (Experimental)</h3>
